@@ -15,6 +15,26 @@ let questions = [
         correct: 8,
         answers: [1, 5, 8, 12, 33],
     },
+    {
+        question: "Как обратиться к классу?",
+        correct: ".",
+        answers: [",", "!", "#", "."],
+    },
+    {
+        question: "Какая команда используется для вывода текста в Python?",
+        correct: "print",
+        answers: ["if", "print", "else"],     
+    },
+    {
+        question: "Какая функция используется для получения длины списка в Python?",
+        correct: "len",
+        answers: ["size", "length", "len"],
+    },
+    {
+        question: "Какой метод используется для добавления элемента в список в Python?",
+        correct: "insert",
+        answers: ["add", "push", "insert"],
+    }
 ];
 
 function startProgram(){
@@ -45,5 +65,19 @@ function check(answer) {
         count += 1;
     }
     current += 1;
-    generate();
+    if (questions.length > current) {
+        generate()
+    } else {
+        stop()
+    }
+}
+ 
+function stop() {
+    start.classList.remove("close");
+    main.classList.add("close");
+    result.classList.remove("close");
+
+    result.innerHTML = `Решено ${count} из ${questions.length}`;
+    current = 0;
+    count = 0;
 }

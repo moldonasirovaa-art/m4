@@ -26,13 +26,13 @@ body {
 }
 
 .btn:hover {
-    background: #15a29c;
+    background: #73f0ea;
     color: #e55a6f;
 }
 
 .title {
     font-size: 50px;
-    color: #e42525;
+    color: #f8fe43;
 }
 
 #main {
@@ -50,7 +50,7 @@ nav {
 
 #result {
     font-size: 30px;
-    color: #15a29c;
+    color: #fff021;
 }
 
 .close {
